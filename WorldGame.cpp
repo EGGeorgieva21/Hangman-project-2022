@@ -26,10 +26,10 @@ int main()
 	string spaceO = "                ";
 	string space3 = "               |";  
 	string Menu = "   MENU GAME  ";
-	string level1 = "  level-1 (+) ";
-	string level2 = "  level-2 (-) ";
-	string level3 = "  level-3 (.) ";
-	string level4 = "  level-4 (:) ";
+	string level1 = "  level-1 (Easy) ";
+	string level2 = "  level-2 (Medium) ";
+	string level3 = "  level-3 (Hard) ";
+	string level4 = "  level-4 (Very Hard) ";
 
 	//system("color 4f");
 	//HANDLE value = GetStdHandle(STD_OUTPUT_HANDLE);
