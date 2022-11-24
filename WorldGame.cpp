@@ -1,13 +1,18 @@
 #include <iostream>
+#include"hangmanFunctions.h"
+
 #include <iomanip>
 #include <cmath>
 #include <windows.h>
+#include <random>
+// QA - check if we're really using all these libraries once we finish up w/ everything
 
 #define SCREEN_WIDTH 20
 #define SCREEN_HEIGHT 20
 #define MENU_WIDTH 20
 
 using namespace std;
+
 
 int main()
 {
@@ -119,4 +124,5 @@ int main()
 	else {
 		cout << "Error";
 	}
+	
 }
