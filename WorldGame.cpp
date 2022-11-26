@@ -8,8 +8,6 @@
 using namespace std;
 // QA - check if we're really using all these libraries once we finish up w/ everything
 
-
-
 int main()
 {
 	
@@ -30,71 +28,13 @@ int main()
 	cout << setw(16) << "|" << setw(23) << "level - 4 (Very Hard)" << setw(3) << "|" << endl;
 	cout << setw(42) << "|_________________________|" << endl;
 	
-	if (button == "ON") {
-		HANDLE color2 = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(color2, 15);
-		cout << "Color for game" << endl;
-		cout << "1 - dark_blue" << endl;
-		cout << "2 - dark_green" << endl;
-		cout << "3 - dark_sky_blue" << endl;
-		cout << "4 - dark_red" << endl;
-		cout << "5 - dark_purple" << endl;
-		cout << "6 - dark_brown" << endl;
-		cout << "7 - dark_white" << endl;
-		cout << "8 - dark_grey" << endl;
-		cout << "9 - blue" << endl;
-		cout << "10 - green" << endl;
-		cout << "11 - sky blue" << endl;
-		cout << "12 - red" << endl;
-		cout << "13 - purple" << endl;
-		cout << "14 - yellow" << endl;
-		cout << "15 - white" << endl;
-		cout << "write a number-";
-		cin >> color;
-		switch (color)
-		{
-		case 1: system("color 01"); break;
-		case 2: system("color 02"); break;
-		case 3: system("color 03"); break;
-		case 4: system("color 04"); break;
-		case 5: system("color 05"); break;
-		case 6: system("color 06"); break;
-		case 7: system("color 07"); break;
-		case 8: system("color 08"); break;
-		case 9: system("color 09"); break;
-		case 10: system("color 0A"); break;
-		case 11: system("color 0B"); break;
-		case 12: system("color 0C"); break;
-		case 13: system("color 0D"); break;
-		case 14: system("color 0E"); break;
-		case 15: system("color 0F"); break;
-		default: cout << "Error"; break;
-		}
-	}
-	else { 
-		cout << "Goodbye";
-		HANDLE color3 = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(color3, 15);
-	}
-
-	cout << "_________________________________________________";
-	
-	// print box parameters for main game
+	cout << "_________________________________________________";	
 	for (int i = 1; i <= 24; i++)
 	{
 		cout << "|                                               |" << endl;
+		// print box parameters for main game
 	}
-	
 	cout << "_________________________________________________";
-	
-			HANDLE color15 = GetStdHandle(STD_OUTPUT_HANDLE);
-			SetConsoleTextAttribute(color15, 12);
-			
-			HANDLE color16 = GetStdHandle(STD_OUTPUT_HANDLE);
-			SetConsoleTextAttribute(color16, 15);
-			cout << setw(6) << "Start/Quit" << endl;
-			cin >> START;
-
 
 	if (START == "Start" || START == "START" || START == "start")
 	{
@@ -102,7 +42,7 @@ int main()
 	}
 	else 
 	{
-		cout << "Error";
+		cout << "You've did something wrongly. Try typing Start or start or START";
 	}
 	/*cout << "Character-";
 	cin >> character;
