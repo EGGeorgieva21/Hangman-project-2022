@@ -1,5 +1,4 @@
 #include <iostream>
-#include"hangmanFunctions.h"
 
 #include <iomanip>
 #include <cmath>
@@ -34,7 +33,12 @@ int main()
 		cout << "|                                               |" << endl;
 		// print box parameters for main game
 	}
-	cout << "_________________________________________________";
+	cout << "_________________________________________________" << endl;
+
+
+	string START;
+    cout << "Start?";
+    cin >> START;
 
 	if (START == "Start" || START == "START" || START == "start")
 	{
@@ -44,7 +48,7 @@ int main()
 	{
 		cout << "You've did something wrongly. Try typing Start or start or START";
 	}
-	/*cout << "Character-";
+	/*cout << "stacter-";
 	cin >> character;
 	cout << endl;
 	for (int i = 0; i <= 52; i++) {
