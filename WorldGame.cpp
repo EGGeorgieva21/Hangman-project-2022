@@ -19,67 +19,17 @@ int main()
 	string robot4[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | | \n", "      | | \n", "----------------------------------------------------" };
 	string robot5[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | \n", "       | \n", "----------------------------------------------------" };
 	string robot6[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "      |   |\n", "----------------------------------------------------" };
-	//do this w setw
-	//string START;
-	//string text = " "; 
-	//string boxSpace = "                                                 ";	
-	//string spaceBox = "                                               ";
-	//string valueNum;
-	//string SpaceMenu = " |";  
-	//string space1 = " |";
-	//string space2 = "_______________";   
-	//string space = "                |";
-	//string space3 = "               |";  
-	//string Menu = "   MENU GAME  ";
-	//string level1 = "  level-1 (Easy) ";
-	//string level2 = "  level-2 (Medium) ";
-	//string level3 = "  level-3 (Hard) ";
-	//string level4 = "  level-4 (Very Hard) ";
-
-	/*HANDLE color14 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color14, 9);
-	cout << spaceO;
-
-	cout << space2 << endl;
-	cout << space3 << space3 << endl;
-	cout << space3;
-	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color, 9);
-	cout << Menu;
-	HANDLE color1 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color1, 9);
-	cout << SpaceMenu << endl;
-	cout << space3;
-	HANDLE color2 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color2, 10);
-	cout << level1;
-	HANDLE color3 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color3, 9);
-	cout << space1 << endl;
-	cout << space3;
-	HANDLE color4 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color4, 13);
-	cout << level2;
-	HANDLE color5 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color5, 9);
-	cout << space1 << endl;
-	cout << space3;
-	HANDLE color6 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color6, 12);
-	cout << level3;
-	HANDLE color7 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color7, 9);
-	cout << space1 << endl;
-	cout << space3;
-	HANDLE color8 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color8, 11);
-	cout << level4;
-	HANDLE color9 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color9, 9);
-	cout << space1 << endl;
-	cout << space3 << space2 << "|" << endl;
-	HANDLE color13 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color13, 15); */
+	
+	cout << setw(41) << "_________________________" << endl;
+	cout << setw(16) << "|" << setw(26) << "|" << endl;
+	cout << setw(16) << "|" << setw(17) << "MENU GAME" << setw(9) << "|" << endl;
+	cout << setw(16) << "|" << setw(26) << "|" << endl;
+	cout << setw(16) << "|" << setw(18) << "level - 1 (Easy)" << setw(8) << "|" << endl;
+	cout << setw(16) << "|" << setw(20) << "level - 2 (Normal)" << setw(6) << "|" << endl;
+	cout << setw(16) << "|" << setw(18) << "level - 3 (Hard)" << setw(8) << "|" << endl;
+	cout << setw(16) << "|" << setw(23) << "level - 4 (Very Hard)" << setw(3) << "|" << endl;
+	cout << setw(42) << "|_________________________|" << endl;
+	
 	if (button == "ON") {
 		HANDLE color2 = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(color2, 15);
