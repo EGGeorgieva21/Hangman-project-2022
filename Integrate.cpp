@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cmath>
 #include <windows.h>
@@ -19,12 +19,14 @@ int main()
 	int num2 = 0;
 	int num3 = 0;
 	int num4 = 0;
+	
 	//Words degree
 	/*string easy[2]{"ball", "four"};//3-4
 	string normal[2]{ "leaf", "board"};//4-5
 	string hard[3]{ "fight", "flower", "accept" };//5-6
 	string veryHard[2]{ "accept", "quizzer" };//6-7+
 	string veryHard1[3]{ "fizzing", "whizzer"};//7-8+*/
+
 	string easy[8]{ "b", "a", "l", "l", /**/"f", "o", "u", "r" };//3-4
 	string normal[9]{ "l", "e", "a", "f", /**/"b", "o", "a", "r", "d"};//4-5
 	string hard[17]{ "f", "i", "g", "h", "t",/* */ "f", "l", "o", "w", "e", "r", /* */"a", "c", "c", "e", "p", "t"};//5-6
@@ -33,7 +35,7 @@ int main()
 	string Start;
 	string box = "_______________________________________________________________________________________________________________________";
 	string spaceBox = "                                                                                                                     ";
-	string box1 = "|";
+	string box1 = "|"; 
 	string rules[7]{ "Rules", "_____________________", "|", "TEXT", "|", "|____________________", "____________________|"};
 	string menu[5]{"Menu Game", "level-1 (Easy)", "level-2 (Normal)", "level-3 (Hard)", "level-4 (Very Hard)"};
 	string robot1[12]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      /   \\\n  ", "   /     \\\n", "    /       \\\n"};

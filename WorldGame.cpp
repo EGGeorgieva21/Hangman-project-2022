@@ -5,45 +5,41 @@
 #include <cmath>
 #include <windows.h>
 #include <random>
+using namespace std;
 // QA - check if we're really using all these libraries once we finish up w/ everything
 
-#define SCREEN_WIDTH 20
-#define SCREEN_HEIGHT 20
-#define MENU_WIDTH 20
-
-using namespace std;
 
 
 int main()
 {
-	//tring people[5]{"( )","_____|_____","|   |","|   |","____",}
-	string START;
-	string text = " "; 
-	string boxSpace = "                                                 ";
-	string box = "_________________________________________________";
-	string box1 = "|";
-	string spaceBox = "                                               ";
-	string valueNumZnak;
-	string SpaceMenu = " |";  
-	string space1 = " |";
-	string space2 = "_______________";   
-	string space = "                |";
-	string spaceO = "                ";
-	string space3 = "               |";  
-	string Menu = "   MENU GAME  ";
-	string level1 = "  level-1 (Easy) ";
-	string level2 = "  level-2 (Medium) ";
-	string level3 = "  level-3 (Hard) ";
-	string level4 = "  level-4 (Very Hard) ";
+	
+	string robot1[12]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      /   \\\n  ", "   /     \\\n", "    /       \\\n"};
+	string robot2[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | | | |\n", "     | | | |\n", "----------------------------------------------------" };
+	string robot3[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | | | \n", "     | | | \n", "----------------------------------------------------" };
+	string robot4[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | | \n", "      | | \n", "----------------------------------------------------" };
+	string robot5[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "     _|___|_\n", "     | \n", "       | \n", "----------------------------------------------------" };
+	string robot6[15]{ "_________________\n", "        |\n" , "      __|__\n", "     (- _ -)\n", "  _____ | _____\n", " /    |   |    \\\n"," |    |   |    |\n", " |    |   |    |\n", "      |___|\n", "      |   |\n", "      |   |\n", "      |   |\n", "----------------------------------------------------" };
+	//do this w setw
+	//string START;
+	//string text = " "; 
+	//string boxSpace = "                                                 ";	
+	//string spaceBox = "                                               ";
+	//string valueNum;
+	//string SpaceMenu = " |";  
+	//string space1 = " |";
+	//string space2 = "_______________";   
+	//string space = "                |";
+	//string space3 = "               |";  
+	//string Menu = "   MENU GAME  ";
+	//string level1 = "  level-1 (Easy) ";
+	//string level2 = "  level-2 (Medium) ";
+	//string level3 = "  level-3 (Hard) ";
+	//string level4 = "  level-4 (Very Hard) ";
 
-	//system("color 4f");
-	//HANDLE value = GetStdHandle(STD_OUTPUT_HANDLE);
-	//SetConsoleTextAttribute(value, 9);
-	HANDLE color14 = GetStdHandle(STD_OUTPUT_HANDLE);
+	/*HANDLE color14 = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color14, 9);
 	cout << spaceO;
-	//HANDLE color12 = GetStdHandle(STD_OUTPUT_HANDLE);
-	//SetConsoleTextAttribute(color12, 17); 
+
 	cout << space2 << endl;
 	cout << space3 << space3 << endl;
 	cout << space3;
@@ -83,46 +79,79 @@ int main()
 	cout << space1 << endl;
 	cout << space3 << space2 << "|" << endl;
 	HANDLE color13 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color13, 15);
-	cout << box << endl;
-	cout << boxSpace << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box1 << spaceBox << box1 << endl;
-	cout << box << endl;
-	cout << spaceO << "      ";
-	HANDLE color15 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color15, 12);
-	cin >> START;
-	HANDLE color16 = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(color16, 15);
-	cout << spaceO << "      " << endl;
-	if (START == "Start" || START == "START" || START == "start") {
-
+	SetConsoleTextAttribute(color13, 15); */
+	if (button == "ON") {
+		HANDLE color2 = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(color2, 15);
+		cout << "Color for game" << endl;
+		cout << "1 - dark_blue" << endl;
+		cout << "2 - dark_green" << endl;
+		cout << "3 - dark_sky_blue" << endl;
+		cout << "4 - dark_red" << endl;
+		cout << "5 - dark_purple" << endl;
+		cout << "6 - dark_brown" << endl;
+		cout << "7 - dark_white" << endl;
+		cout << "8 - dark_grey" << endl;
+		cout << "9 - blue" << endl;
+		cout << "10 - green" << endl;
+		cout << "11 - sky blue" << endl;
+		cout << "12 - red" << endl;
+		cout << "13 - purple" << endl;
+		cout << "14 - yellow" << endl;
+		cout << "15 - white" << endl;
+		cout << "write a number-";
+		cin >> color;
+		switch (color)
+		{
+		case 1: system("color 01"); break;
+		case 2: system("color 02"); break;
+		case 3: system("color 03"); break;
+		case 4: system("color 04"); break;
+		case 5: system("color 05"); break;
+		case 6: system("color 06"); break;
+		case 7: system("color 07"); break;
+		case 8: system("color 08"); break;
+		case 9: system("color 09"); break;
+		case 10: system("color 0A"); break;
+		case 11: system("color 0B"); break;
+		case 12: system("color 0C"); break;
+		case 13: system("color 0D"); break;
+		case 14: system("color 0E"); break;
+		case 15: system("color 0F"); break;
+		default: cout << "Error"; break;
+		}
 	}
-	else {
-		cout << "Error";
+	else { 
+		cout << "Goodbye";
+		HANDLE color3 = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(color3, 15);
+	}
+
+	cout << "_________________________________________________";
+	
+	// print box parameters for main game
+	for (int i = 1; i <= 24; i++)
+	{
+		cout << "|                                               |" << endl;
 	}
 	
+	cout << "_________________________________________________";
+	
+			HANDLE color15 = GetStdHandle(STD_OUTPUT_HANDLE);
+			SetConsoleTextAttribute(color15, 12);
+			
+			HANDLE color16 = GetStdHandle(STD_OUTPUT_HANDLE);
+			SetConsoleTextAttribute(color16, 15);
+			cout << setw(6) << "Start/Quit" << endl;
+			cin >> START;
+
+
+	if (START == "Start" || START == "START" || START == "start")
+	{
+		cout << "You've entered the game";
+	}
+	else 
+	{
+		cout << "Error";
+	}	
 }
