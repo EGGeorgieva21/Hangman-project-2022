@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 #include <random>
-#include"hangmanFunctions.cpp"
+
 using namespace std;
 //how to use vector library? more research here.
 //To explain, for the sake of functionality, this file will store all our variables/functions declarations. 
