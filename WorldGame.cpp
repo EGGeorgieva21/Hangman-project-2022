@@ -17,7 +17,8 @@ int main()
 	string w[7];
 	string level;
 	default_random_engine eng;
-	int RandomInt = eng();
+	int RandomWord = eng();
+	
 	string easy[8]{ "b", "a", "l", "l", /**/"f", "o", "u", "r" };//3-4
 	string easy1[2]{ "ball", "four" };
 	string normal[9]{ "l", "e", "a", "f", /**/"b", "o", "a", "r", "d" };//4-5
@@ -28,7 +29,9 @@ int main()
 	string veryHard1[2]{ "accept", "quizzer" };
 	string veryHard2[14]{ "f", "i", "z", "z", "i", "n", "g", /**/  "w", "h", "i", "z", "z", "e", "r" };//7-8+
 	string veryHard3[2]{ "fizzing", "whizzer" };
-	char word[61]{ 'b', 'a', 'l', 'l', /*4*/'f', 'o', 'u', 'r', /*4/8*/ 'l', 'e', 'a', 'f', /*4/12*/'b', 'o', 'a', 'r', 'd', /*5/17*/ 'f', 'i', 'g', 'h', 't',/*5/22*/ 'f', 'l', 'o', 'w', 'e', 'r', /*6/28*/'a', 'c', 'c', 'e', 'p', 't', /*6/34*/ 'a', 'c', 'c', 'e', 'p', 't',/*6/40*/ 'q', 'u', 'i', 'z', 'z', 'e', 'r', /*7/47*/ 'f', 'i', 'z', 'z', 'i', 'n', 'g',/*7/54*/ 'w', 'h', 'i', 'z', 'z', 'e', 'r' /*7/61*/ };
+
+	//char word[61]{ 'b', 'a', 'l', 'l', /*4*/'f', 'o', 'u', 'r', /*4/8*/ 'l', 'e', 'a', 'f', /*4/12*/'b', 'o', 'a', 'r', 'd', /*5/17*/ 'f', 'i', 'g', 'h', 't',/*5/22*/ 'f', 'l', 'o', 'w', 'e', 'r', /*6/28*/'a', 'c', 'c', 'e', 'p', 't', /*6/34*/ 'a', 'c', 'c', 'e', 'p', 't',/*6/40*/ 'q', 'u', 'i', 'z', 'z', 'e', 'r', /*7/47*/ 'f', 'i', 'z', 'z', 'i', 'n', 'g',/*7/54*/ 'w', 'h', 'i', 'z', 'z', 'e', 'r' /*7/61*/ };
+	
 	cout << setw(7) << "__" << endl;
 	cout << setw(5) << "|" << setw(3) << "|" << endl;
 	cout << setw(5) << "|" << setw(4) << "\\O/" << endl;
@@ -54,36 +57,60 @@ int main()
 	//}
 	//cout << "_________________________________________________" << endl; 
 
+//rules
+	cout << "Rules: When asked start, echo start. otherwise, death." << endl;
+	cout << "You want to end the game... perhaps a 0 would do ? " << endl;
 	cout << "Start?" << endl;
-	char start[4];
+	string start;
+	cin >> start;
+
+
+//Don't touch, this part officially WORKS. DONT. TOUCH. I WILL FIND YOU!!!!!!!!!!!!!!!!!!!!!!!!!!
+	while ((start != "Start") || (start != "start") || (start != "START")){
+		if ((start == "Start") || (start == "start") || (start == "START")){
+			//start the game
+			cout << "welcome" << endl;
+			break;
+
+		}
+		if(start == "0"){
+			cout << "Bye." << endl;
+			exit(0); //stops the game 
+		}
+		else{
+			//restart the code
+			cout << "Not quite. Are you sure you spelled it correctly? Or perhaps you meant to say 0?" << endl;
+			cin >> start;
+			break;
+		}
+	}
+
+	/*char start[4];
 	cin.getline(start, 4, '\n');
 	int length = strlen(start);
 
 	for (int i = 1; i <= length; i++)
 	{
 		cout << "You have started!" << endl; break;
-	}
+	}*/
 
 	
 	cout << "level - ";
 	cin >> level;
 	cout << endl;
 		// level - 1,2,3,4
-		RandomInt = pow(RandomInt, 2);
-	while (RandomInt <= 10) 
+	RandomWord = pow(RandomWord, 2);
+	while (RandomWord <= 10) 
 	{
-		RandomInt = RandomInt / 10;
+		RandomWord = RandomWord / 10;
 	}
 	
-
-	
-
 
 	
 	// random_int < 10 and random_int > 0 
 	if ((level == "easy") || (level == "1")) 
 	{
-		if (easy1[RandomInt] == "ball") 
+		if (easy1[RandomWord] == "ball") 
 		{
 			for (int i = 0; i <= 3; i++) 
 			{
@@ -104,7 +131,7 @@ int main()
 	// w[i]- is list for characters on words 
 	if ((level == "normal") || (level == "2")) 
 	{
-		if (normal1[RandomInt] == "leaf")
+		if (normal1[RandomWord] == "leaf")
 		{
 			for (int i = 0; i <= 3; i++) 
 			{
@@ -123,7 +150,7 @@ int main()
 	}
 	if ((level == "hard") || (level == "3")) 
 	{
-		if ((hard1[int(RandomInt)] == "fight")) 
+		if ((hard1[int(RandomWord)] == "fight")) 
 		{
 			for (int i = 0; i <= 4; i++) 
 			{
@@ -131,7 +158,7 @@ int main()
 				num1 = 5;
 			}
 		}
-		if (hard1[RandomInt] == "flower") 
+		if (hard1[RandomWord] == "flower") 
 		{
 			for (int v = 5; v <= 10; v++) 
 			{
@@ -152,7 +179,7 @@ int main()
 	}
 	if ((level == "Very Hard") || (level == "4")) 
 	{
-		if ((veryHard1[int(RandomInt)] == "accept")) 
+		if ((veryHard1[int(RandomWord)] == "accept")) 
 		{
 			for (int i = 0; i <= 5; i++) 
 			{
@@ -171,7 +198,7 @@ int main()
 	}
 	if ((level == "Very Hard - 1") || (level == "5"))
 	{
-		if (veryHard2[RandomInt] == "fizzing") 
+		if (veryHard2[RandomWord] == "fizzing") 
 		{
 			for (int i = 0; i <= 6; i++) 
 			{
@@ -188,24 +215,24 @@ int main()
 				num1 = 7;
 			}
 		}
-	}
+	}	
 	
 	
-	string character;
-	cout << "Character-";
-	cin >> character;
-	cout << endl;
-		//Character - a
-
-		
+	/*
+	int index;
 	int counter = 0;
 	while (counter < 1)
 	{	
-		
+		string character;
+		cout << "Character-";
+		cin >> character;
+		cout << endl;
 		for (int v = 0; v <= 6; v++) 
 		{
 			if (character == w[v]) 
 			{
+				cin << index;
+				
 				cout << "True-" << character << endl;
 				break;
 			}
@@ -221,14 +248,46 @@ int main()
 		}
 
 		counter++;
+	} */
+/*char character;
+cout << "What's your guess?" << endl;
+cin >> character;*/
+
+
+//char character;
+string character;
+// hp percentage here, let's just set it to 6 for texting
+	for (int v=0; v<=6; v++)
+	{
+	
+		cout << "What's your guess?" << endl;
+		cin >> character;
+		if (character == w[v]){
+			cout << character << "is in word" << endl;
+			//cout the place of the char in the word, somehow visually? have an idea 4 this
+		}
+		else{
+			cout << character << "isn't in the word" << endl;
+			// make a vector which adds the character to it, later make an output of that vector as tried letters not in word
+		}
+
+
+		/*while(character) <= 7){
+			if (character == w[v]) 
+			{				
+				cout << "True-" << character << endl;
+				break;
+			}
+			// True - a
+			else 
+			{
+				cout << "False-" << character << endl;
+				break;
+			}
+			// False - a
+		}
+		*/
 	}
-
-
-
-
-
-
-
 
 
 
