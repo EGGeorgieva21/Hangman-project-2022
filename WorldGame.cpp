@@ -92,10 +92,7 @@ int main()
 	cin >> level;
 
 
-
-
 	//here the magic ends.
-
 
 
 	cout << endl;
@@ -291,8 +288,6 @@ cin >> character;*/
 		}
 		*/
 	}
-
-
 
 
 
