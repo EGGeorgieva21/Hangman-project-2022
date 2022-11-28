@@ -41,4 +41,111 @@ int main()
 	{
 		cout << "You have started!"; break;
 	}
+	/*
+	cout << "level - ";
+	cin >> level;
+	RandomInt = RandomInt * RandomInt;
+	while (RandomInt <= 10) {
+		RandomInt = RandomInt / 10;
+	}
+	if ((level == "easy") || (level == "1")) {
+		if (easy1[RandomInt] == "ball") {
+			for (int i = 0; i <= 3; i++) {
+				w[i] = easy[i];
+				num1 = 4;
+			}
+		}
+		else {
+			for (int i = 4; i <= 7; i++) {
+				w[num] = easy[i];
+				num = num + 1;
+				num1 = 8;
+			}
+		}
+	}
+	if ((level == "normal") || (level == "2")) {
+		if (normal1[RandomInt] == "leaf") {
+			for (int i = 0; i <= 3; i++) {
+				w[i] = easy[i];
+				num1 = 4;
+			}
+		}
+		else {
+			for (int v = 4; v <= 8; v++) {
+				w[int(num)] = easy[v];
+				num = num + 1;
+				num1 = 5;
+			}
+		}
+	}
+	if ((level == "hard") || (level == "3")) {
+		if ((hard1[int(RandomInt)] == "fight")) {
+			for (int i = 0; i <= 4; i++) {
+				w[i] = easy[i];
+				num1 = 5;
+			}
+		}
+		if (hard1[RandomInt] == "flower") {
+			for (int v = 5; v <= 10; v++) {
+				w[int(num)] = easy[int(v)];
+				num = num + 1;
+				num1 = 6;
+			}
+		}
+		else {
+			for (int c = 11; c <= 16; c++) {
+				w[num] = easy[int(c)];
+				num = num + 1;
+				num1 = 6;
+			}
+		}
+	}
+	if ((level == "Very Hard") || (level == "4")) {
+		if ((veryHard1[int(RandomInt)] == "accept")) {
+			for (int i = 0; i <= 5; i++) {
+				w[i] = easy[i];
+				num1 = 6;
+			}
+		}
+		else {
+			for (int v = 6; v <= 12; v++) {
+				w[num] = easy[int(v)];
+				num = num + 1;
+				num1 = 7;
+			}
+		}
+	}
+	if ((level == "Very Hard - 1") || (level == "5")) {
+		if (veryHard2[RandomInt] == "fizzing") {
+			for (int i = 0; i <= 6; i++) {
+				w[i] = easy[i];
+				num1 = 7;
+			}
+		}
+		else {
+			for (int v = 7; v <= 13; v++) {
+				w[int(num)] = easy[int(v)];
+				num = num + 1;
+				num1 = 7;
+			}
+		}
+	}
+	cout << "Character-";
+	cin >> character;
+	cout << endl;
+	while (True != true) {
+		for (int v = 0; v <= 6; v++) {
+			if (character == w[v]) {
+				cout << "True-" << character << endl; break;
+
+				if (num2 == num1) {
+					True = (true);
+				}
+				else {
+					cout << "False-" << character << endl; break;
+				}
+			}
+		}
+	}
+	*/
 }
