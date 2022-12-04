@@ -101,7 +101,7 @@ int main()
 	while ((RandomWord <= 10) && (RandomWord >= 0)) 
 	{
 		RandomWord = RandomWord / 10;
-	}
+	}	
 	
 	// random_int < 10 and random_int > 0 
 	if ((level == "easy") || (level == "1")) 
@@ -256,6 +256,7 @@ cin >> character;*/
 	cout << "character -";
 	char character;
 	cout << endl;
+	
 	// hp percentage here, let's just set it to 6 for texting
 	for (int v=0; v<=6; v++)
 	{
