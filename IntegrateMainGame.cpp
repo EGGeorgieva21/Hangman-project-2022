@@ -11,20 +11,32 @@ using namespace std;
 
 int main()
 {
-    
+    //cout << "___                __"
+    //cout << "| |                | |"
+    //cout << "| |                | |"
+    //cout << "| |                | |"
+    //cout << "| |                | |     ________."
+    //cout << "| |----------------| |    / _____  |"
+    //cout << "| |                | |   / /     | |"
+    //cout << "| |----------------| |  /_/      | |"
+    //cout << "| |                | |      _____| |"
+    //cout << "| |                | |   / /     | |"
+    //cout << "| |                | |  | |      | |"
+    //cout << "|_|                |_|   \_\_____|_|"
+
+
 //randomize this char array based on predefined lvl
 
     // random declarations
-	int length;
     string word;
-    int health = 10;
-    string inputLetter;
+    double health = 16;
+    string level;
+    string guess;
     bool gameEnded = false;
     
     
     //level declarations
-    cout << "Enter your level: ";
-    string level;
+    cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
 
@@ -33,6 +45,7 @@ int main()
     int fateChooser;
     cin >> fateChooser;
     cout << endl;
+    //checks the difficulty level entered
     if (level == "easy" || level == "1") //level check;
     {
         if(fateChooser == 1)
@@ -43,7 +56,6 @@ int main()
         {
             word = "four" ;
         }
-        length = 4;
     }
     else if (level == "normal" || level == "2")
     {
@@ -55,7 +67,6 @@ int main()
         {
             word = "fight";
         }
-        length = 5;
     }
     else if (level == "hard" || level == "3")
     {
@@ -67,7 +78,6 @@ int main()
         {
             word = "merrow";
         }
-        length = 6;
     }
     else if (level == "veryHard" || level == "4")
     {
@@ -79,7 +89,6 @@ int main()
         {
             word = "mrkdnu";
         }
-        length = 6;
     }
     else if (level == "veryHard1" || level == "5")
     {
@@ -91,70 +100,72 @@ int main()
         {
             word = "whizzer";
         }
-        length = 7;
     }
     
-   //word
-    char wordToChar[8] = {every letter of word};
-
-    while(health > 0) // vuvejdane na bukvi
-    {
-        
-        cin >> inputLetter;
+    string guess;
+    while(health > 0 || gameEnded != false) // vuvejdane na bukvi
+    { 
+        cout << "Enter what you think the word is: ";
+        cin >> guess;
         cout << endl;
         
-        for(int i = 0; i < length; i++) // proverka za bukvite
-	    {
+        
+            if(guess == word)
+            {
+                cout << "Grats, ya won" << endl;
+                gameEnded = true;
 
-		    if(inputLetter == wordToChar[i])
-		    {
-			    cout << "You guessed correctly! Congratulations!";
-		    }
-
-		    else //loosing hp part
+                cout << "You guessed: " << guess << endl; 
+                cout << "And the word was: " << word << endl;
+                break;
+            }
+            
+		    else //losing hp part 
 		    {
                 if (level == "easy" || level == "1")
                 {
-                    health -= 1;    
+                    health -= 1;
+                    cout << guess << " is not a the correct word." << endl;
+			        cout << "You have " << health <<  " health left. Feel threatened." << endl;  
+                    break;  
                 }
                 else if (level == "normal" || level == "2")
                 {
                     health -= 2;
+                    cout << guess << " is not the correct word." << endl;
+			        cout << "You have " << health <<  " health left. Feel threatened." << endl; 
+                    break;
                 }
                 else if (level == "hard" || level == "3")
                 {
                     health -= 3;
+                    cout << guess << " is not the correct word." << endl;
+			        cout << "You have " << health <<  " health left. Feel threatened." << endl; 
+                    break;
                 }
                 else if (level == "veryHard" || level == "4")
                 {
                     health -= 3.5;
+                    cout << guess << " is not the correct word." << endl;
+			        cout << "You have " << health <<  " health left. Feel threatened." << endl; 
+                    break;
                 }
                 else if (level == "veryHard1" || level == "5")
                 {
                     health -= 4;
+                    cout << guess << " is not the correct word." << endl;
+			        cout << "You have " << health <<  " health left. Feel threatened." << endl; 
+                    break;
                 }
-            
-			    cout << "Try again. You have " << health <<  " health left." << endl;
-                cout << inputLetter << " is not a correct letter." << endl;
 		    }
             
             if(health <= 0)//dying part
             {
                 health = 0;
-                cout << "You have 0 health left. You've lost.";
+                cout << "You have 0 health left. You've lost." << endl;
                 gameEnded = true;
                 break;
             }
-            
-            else
-            {
-                cout << "You have " << health << " health left.";
-            }
-        }
-
-        if(gameEnded)
-        {
-            break;
-        }
-	} 
-} 
+    }
+    
+}
