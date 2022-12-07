@@ -1,11 +1,10 @@
 #include <iostream>
-#include "WorldGame.cpp"
+#include "hangmanFunctions.h"
 #include <iomanip>
 #include <string>
 using namespace std;
 //Add any extra libraries as needed.
 // Feel free to define your functions here. Add comments to say what they do, if necessary.
-
 
 
 void printingHangman() //prints the game title in big letters
@@ -49,31 +48,35 @@ void printingMenuLevel() //Prints the level menu
 	cout << setw(16) << "|" << setw(24) << "level - 4 (Very Hard)" << setw(8) << "|" << endl;
 	cout << setw(16) << "|" << setw(28) << "level - 5 (Very Hard - 1)" << setw(4) << "|" << endl;
 	cout << setw(48) << "|_______________________________|" << endl;
+    cout << endl;
 }
 
 void printingRules() //Prints the rules
 { 
-    cout << "Rules: When asked start, echo start. otherwise, death." << endl;
-	cout << "If you want to end the game... perhaps a 0 would do... ? " << endl;
-	cout << "So, start?\n" << endl;
+    cout << "Rules: When asked start, echo start. otherwise, death. If you want to end the game... perhaps a 0 would do... ? " << endl;
+	cout << "So, start? ";
 	cin >> start;
 }
 
 void startingTheGame() //The part of the code when you type "start" to start the game
 {
-    while ((start != "Start") || (start != "start") || (start != "START")){
-		if ((start == "Start") || (start == "start") || (start == "START")){
+    while ((start != "Start") || (start != "start") || (start != "START"))
+    {
+		if ((start == "Start") || (start == "start") || (start == "START"))
+        {
 			//start the game
 			cout << "welcome" << endl;
 			break;
 		}
-		else if(start == "0"){
+		else if(start == "0")
+        {
 			cout << "Bye." << endl;
 			exit(0); //stops the game 
 		}
-		else{
+		else
+        {
 			//restart the code
-			cout << "Not quite. Are you sure you spelled it correctly? Or perhaps you meant to say 0?" << endl;
+			cout << "Not quite. Are you sure you spelled it correctly? Or perhaps you meant to say 0? (your options are /start/ and /0/)" << endl;
 			cin >> start;
 		}
 	}
@@ -84,8 +87,6 @@ void choosingLevel() //Choosing your level
     cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
-
-    
 }
 
 void choosingFate()
