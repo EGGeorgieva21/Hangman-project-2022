@@ -87,6 +87,11 @@ void choosingLevel() //Choosing your level
     cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
+    if (level != 1 && level != 2 && level != 3 && level != 4 && level != 5)
+    {
+        cout << "Choose a level between 1 ~ 5.";
+        exit(0);
+    }
 }
 
 void choosingFate()
@@ -94,6 +99,11 @@ void choosingFate()
     cout << "Choose one your fate. 1 or 2? - ";
     cin >> fateChooser;
     cout << endl;
+    if (fateChooser != 1 && fateChooser != 2)
+    {
+        cout << "Choose a fate between 1 and 2.";
+        exit(0);
+    }
 }
 
 void automaticLevelAssignment()
