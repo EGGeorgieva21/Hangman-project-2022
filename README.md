@@ -12,6 +12,7 @@ This game is about the good old game hangman.
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="15" height="15"> Microsoft Excel
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Microsoft_Word_2013-2019_logo.svg/587px-Microsoft_Word_2013-2019_logo.svg.png?20221202081051" width="15" height="15"> Microsoft Word
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/MicroTeams.png/640px-MicroTeams.png" width="15" height="15"> Microsoft Teams
+- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" width="15" height="15"> Microsoft PowerPoint
 
 ## Features
 ✅ Simplistic looking interface. <br>
