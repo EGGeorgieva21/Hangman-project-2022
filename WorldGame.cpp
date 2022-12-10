@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 // QA - check if we're really using all these libraries once we finish up w/ everything
-
+// Comment
 int main()
 {
 
@@ -18,5 +18,4 @@ int main()
  choosingFate();
  automaticLevelAssignment();
  guessChecker();
-
 }   
