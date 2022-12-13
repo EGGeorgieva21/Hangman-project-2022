@@ -4,8 +4,10 @@
 #include <iomanip>
 #include <string>
 using namespace std;
-// QA - check if we're really using all these libraries once we finish up w/ everything
-// Comment
+
+//rename functions again 
+// rename files again
+
 int main()
 {
 
@@ -14,8 +16,10 @@ int main()
  printingMenuLevel();
  printingRules();
  startingTheGame();
- choosingLevel();
+ getLevel();
  choosingFate();
  automaticLevelAssignment();
  guessChecker();
+
+
 }   

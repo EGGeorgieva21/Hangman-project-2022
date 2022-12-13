@@ -61,14 +61,16 @@ void printingMenuLevel() //Prints the level menu
     cout << endl;
 }
 
-void printingRules() //Prints the rules
+//Prints the rules
+void printingRules() 
 { 
     cout << "Rules: When asked start, echo start. otherwise, death. If you want to end the game... perhaps a 0 would do... ? " << endl;
 	cout << "So, start? ";
 	cin >> start;
 }
 
-void startingTheGame() //The part of the code when you type "start" to start the game
+//The part of the code when you type "start" to start the game
+void startingTheGame() 
 {
     while ((start != "Start") || (start != "start") || (start != "START"))
     {
@@ -92,11 +94,15 @@ void startingTheGame() //The part of the code when you type "start" to start the
 	}
 }
 
-void choosingLevel() //Choosing your level
+//Choosing your level
+int getLevel() 
 {
+    int level;
     cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
+    return level;
+    
 }
 
 void choosingFate()
@@ -108,8 +114,11 @@ void choosingFate()
 
 void automaticLevelAssignment()
 {
-    if (level == "easy" || level == "1") //level check;
+
+    switch (getLevel())
     {
+    case 1:
+
         if(fateChooser == 1)
         {
             cout << "Your hint is: round, smooth. Monkeys all around the world worship it. They run around and kick it... It even has its own sport dedicated to it." << endl;
@@ -120,10 +129,12 @@ void automaticLevelAssignment()
             cout << "Your hint is: A very, very small human. Some are against its death while it is still in primal form. Those guys are weirdoes, do not listen to them." << endl;
             word = "baby";
         }
-    }
-    else if (level == "normal" || level == "2")
-    {
-        if(fateChooser == 1)
+        
+        break;
+
+    case 2:
+
+     if(fateChooser == 1)
         {
             cout << "Your hint is: An item often used in schools and other professional fascilities, with the intention to torture its readers." << endl;
             cout << "A black marker is used to add information to it. It usually hangs on a wall, where its knowledge can be displayed to all who dare look.";
@@ -134,10 +145,11 @@ void automaticLevelAssignment()
             cout <<"Your hint is: This is a measurement for bread. Good luck. And no, the word is not piece.";
             word = "slice";
         }
-    }
-    else if (level == "hard" || level == "3")
-    {
-        if(fateChooser == 1)
+        break;
+
+    case 3:
+
+     if(fateChooser == 1)
         {
             cout << "What button always comes before the decline button on a pop-up asking for some sort of permission?";
             word = "accept";
@@ -147,10 +159,11 @@ void automaticLevelAssignment()
             cout<< "A fancy word for cloth.";
             word = "fabric"; 
         }
-    }
-    else if (level == "veryHard" || level == "4")
-    {
-        if(fateChooser == 1)
+        break;
+
+    case 4:
+
+      if(fateChooser == 1)
         {
             cout << "Long eared angels. Fluffy as a cloud, these little cottonballs love jumping, carrots, and are a great house pet. Write the word in plural.";
             word = "rabbits";
@@ -160,10 +173,11 @@ void automaticLevelAssignment()
             cout << "A tool you use for cleaning, with a purpose of sucking up dust.";
             word = "vacuum";
         }
-    }
-    else if (level == "veryHard1" || level == "5")
-    {
-        if(fateChooser == 1)
+        break;
+
+    case 5:
+
+     if(fateChooser == 1)
         {
             cout << "A vegetable, having thick green or purple leaves surrounding a spherical heart or head of leaves.";
             word = "cabbage";
@@ -173,15 +187,19 @@ void automaticLevelAssignment()
             cout << "Addicts who spends their time in casinos, betting money and playiing games, trying to win more money. More often or not, they rob themselves and end up on the streets. Word is in singular.";
             word = "gambler";
         }
+        break;
     }
 }
 
 void guessChecker() //Checks if your word is the needed word
 {
+    int damage = getLevel() + 0.5;
+    string guess;
+
     while(health > 0 || gameEnded != false)
     { 
         cout << "Enter what you think the word is: ";
-        string guess;
+        
         cin >> guess;
         cout << endl;
         
@@ -189,21 +207,22 @@ void guessChecker() //Checks if your word is the needed word
             if(guess == word)
             {
                 cout << "Grats, ya won" << endl;
-                gameEnded = true;
 
                 cout << "You guessed: " << guess << endl; 
                 cout << "And the word was: " << word << endl;
-                break;
+                
+                gameEnded = true;
             }
             
-		    else //losing hp part 
+            //losing hp part 
+		    else 
 		    {
-                if (level == "easy" || level == "1")
-                {
-                    health -= 1;
-                    cout << guess << " is not a the correct word." << endl;
+                health -= damage;
+                cout << guess << " is not a the correct word." << endl;
                     cout << endl;
-			        if(health <= 0)//dying part
+
+                    //dying part
+			        if(health <= 0)
                     {
                         health = 0;
                         cout << "You have 0 health left. You've lost." << endl;
@@ -214,79 +233,10 @@ void guessChecker() //Checks if your word is the needed word
                     {
 			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
                     }
-                }
-                else if (level == "normal" || level == "2")
-                {
-                    health -= 2;
-                    cout << guess << " is not the correct word." << endl;
-                    cout << endl;
-			        if(health <= 0)//dying part
-                    {
-                        health = 0;
-                        cout << "You have 0 health left. You've lost." << endl;
-                        gameEnded = true;
-                        break;
-                    }
-                    else
-                    {
-			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
-                    }
-                    
-                }
-                else if (level == "hard" || level == "3")
-                {
-                    health -= 3;
-                    cout << guess << " is not the correct word." << endl;
-                    cout << endl;
-			        if(health <= 0)//dying part
-                    {
-                        health = 0;
-                        cout << "You have 0 health left. You've lost." << endl;
-                        gameEnded = true;
-                        break;
-                    }
-                    else
-                    {
-			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
-                    }
-                   
-                }
-                else if (level == "veryHard" || level == "4")
-                {
-                    health -= 3.5;
-                    cout << guess << " is not the correct word." << endl;
-                    cout << endl;
-                    if(health <= 0)//dying part
-                    {
-                        health = 0;
-                        cout << "You have 0 health left. You've lost." << endl;
-                        gameEnded = true;
-                        break;
-                    }
-                    else
-                    {
-			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
-                    }
-                    
-                }
-                else if (level == "veryHard1" || level == "5")
-                {
-                    health -= 4;
-                    cout << guess << " is not the correct word." << endl;
-                    cout << endl;
-                    if(health <= 0)//dying part
-                    {
-                        health = 0;
-                        cout << "You have 0 health left. You've lost." << endl;
-                        gameEnded = true;
-                        break;
-                    }
-                    else
-                    {
-			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
-                    }
-                    
-                }
+
+
 		    }
     }
 }
+
+

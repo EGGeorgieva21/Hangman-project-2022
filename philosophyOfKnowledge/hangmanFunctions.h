@@ -12,7 +12,6 @@ using namespace std;
 string start;
 string word;
 double health = 16;
-string level;  
 bool gameEnded = false;
 int fateChooser;
 
@@ -21,7 +20,7 @@ void printingHuman();
 void printingMenuLevel();
 void printingRules();
 void startingTheGame();
-void choosingLevel();
+int getLevel();
 void choosingFate();
 void automaticLevelAssignment();
 void guessChecker();
