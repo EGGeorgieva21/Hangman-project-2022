@@ -1,13 +1,11 @@
 #include <iostream>
-#include "hangmanFunctions.h"
+#include "main.h"
 #include <iomanip>
 #include <string>
 using namespace std;
-//Add any extra libraries as needed.
-// Feel free to define your functions here. Add comments to say what they do, if necessary.
 
-
-void printingHangman() //prints the game title in big letters
+//Prints the game title in big letters
+void printHangman()
 {
     cout << setw(10) << "   _ _                 _ _" << endl;
     cout << setw(10) << "  | | \\               | | \\" << endl;
@@ -25,7 +23,8 @@ void printingHangman() //prints the game title in big letters
     cout << setw(10) << "                                                                     \\___________/_/" << endl;
 }
 
-void printingHuman() //Prints the little human
+//Prints the little human
+void printHuman() 
 {
     cout << "  ____________________" << endl;
     cout << "  |__________________|" << endl;
@@ -46,7 +45,8 @@ void printingHuman() //Prints the little human
     cout << "  |__________________|" << endl;
 }
 
-void printingMenuLevel() //Prints the level menu 
+//Prints the level menu 
+void printMenuLevel()
 {
     cout << setw(48) << "_________________________________" << endl;
 	cout << setw(16) << "|" << setw(32) << "|" << endl;
@@ -62,15 +62,15 @@ void printingMenuLevel() //Prints the level menu
 }
 
 //Prints the rules
-void printingRules() 
+void printRules() 
 { 
-    cout << "Rules: When asked start, echo start. otherwise, death. If you want to end the game... perhaps a 0 would do... ? " << endl;
+    cout << "Rules: When asked start, echo start. otherwise, death. Words must be lowercase. If you want to end the game... perhaps a 0 would do... ? " << endl;
 	cout << "So, start? ";
 	cin >> start;
 }
 
 //The part of the code when you type "start" to start the game
-void startingTheGame() 
+void startTheGame() 
 {
     while ((start != "Start") || (start != "start") || (start != "START"))
     {
@@ -94,22 +94,22 @@ void startingTheGame()
 	}
 }
 
-//Choosing your level
+//Choose your level
 int getLevel() 
 {
-   
+    cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
     return level;
-
 }
 
-
-void choosingFate()
+//Choose your fate
+int getFate()
 {
     cout << "Choose one your fate. 1 or 2? - ";
     cin >> fateChooser;
     cout << endl;
+    return fateChooser;
 }
 
 //Assigns a the word to the level
@@ -134,7 +134,7 @@ void automaticLevelAssignment()
 
     case 2:
 
-     if(fateChooser == 1)
+        if(fateChooser == 1)
         {
             cout << "Your hint is: An item often used in schools and other professional fascilities, with the intention to torture its readers. " << endl;
             cout << "A black marker is used to add information to it. It usually hangs on a wall, where its knowledge can be displayed to all who dare look. ";
@@ -149,7 +149,7 @@ void automaticLevelAssignment()
 
     case 3:
 
-     if(fateChooser == 1)
+        if(fateChooser == 1)
         {
             cout << "What button always comes before the decline button on a pop-up asking for some sort of permission? ";
             word = "accept";
@@ -163,7 +163,7 @@ void automaticLevelAssignment()
 
     case 4:
 
-      if(fateChooser == 1)
+        if(fateChooser == 1)
         {
             cout << "Long eared angels. Fluffy as a cloud, these little cottonballs love jumping, carrots, and are a great house pet. Write the word in plural. ";
             word = "rabbits";
@@ -177,7 +177,7 @@ void automaticLevelAssignment()
 
     case 5:
 
-     if(fateChooser == 1)
+        if(fateChooser == 1)
         {
             cout << "A vegetable, having thick green or purple leaves surrounding a spherical heart or head of leaves. ";
             word = "cabbage";
@@ -191,7 +191,8 @@ void automaticLevelAssignment()
     }
 }
 
-void guessChecker() //Checks if your word is the needed word
+//Checks if your word is the needed word
+void guessChecker()
 {
     int damage = level + 0.5;
     string guess;
@@ -199,19 +200,15 @@ void guessChecker() //Checks if your word is the needed word
     while(health > 0)
     { 
         cout << "Enter what you think the word is: ";
-        
         cin >> guess;
         cout << endl;
-        
         
             if(guess == word)
             {
                 cout << "Grats, ya won" << endl;
-
                 cout << "You guessed: " << guess << endl; 
                 cout << "And the word was: " << word << endl;
                 break;
-                
             }
             
             //losing hp part 
@@ -219,12 +216,11 @@ void guessChecker() //Checks if your word is the needed word
 		    {
                 health -= damage;
                 cout << guess << " is not a the correct word." << endl;
-                    cout << endl;
+                cout << endl;
 
                     //dying part
 			        if(health <= 0)
                     {
-                        health = 0;
                         cout << "You have 0 health left. You've lost." << endl;
                         break;
                     }
@@ -233,10 +229,6 @@ void guessChecker() //Checks if your word is the needed word
 			            cout << "You have " << health <<  " health left. Feel threatened." << endl;
                         cout << endl;
                     }
-
-
 		    }
     }
 }
-
-
