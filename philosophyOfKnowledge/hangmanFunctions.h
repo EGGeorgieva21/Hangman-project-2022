@@ -11,8 +11,8 @@ using namespace std;
 // global declarations
 string start;
 string word;
+int level;
 double health = 16;
-bool gameEnded = false;
 int fateChooser;
 
 void printingHangman();

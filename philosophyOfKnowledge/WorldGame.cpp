@@ -16,6 +16,7 @@ int main()
  printingMenuLevel();
  printingRules();
  startingTheGame();
+    cout << "Enter your level (1 ~ 5): ";
  getLevel();
  choosingFate();
  automaticLevelAssignment();

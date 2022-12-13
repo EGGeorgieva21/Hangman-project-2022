@@ -97,13 +97,13 @@ void startingTheGame()
 //Choosing your level
 int getLevel() 
 {
-    int level;
-    cout << "Enter your level (1 ~ 5): ";
+   
     cin >> level;
     cout << endl;
     return level;
-    
+
 }
+
 
 void choosingFate()
 {
@@ -112,21 +112,21 @@ void choosingFate()
     cout << endl;
 }
 
+//Assigns a the word to the level
 void automaticLevelAssignment()
 {
-
-    switch (getLevel())
+    switch (level)
     {
     case 1:
 
         if(fateChooser == 1)
         {
-            cout << "Your hint is: round, smooth. Monkeys all around the world worship it. They run around and kick it... It even has its own sport dedicated to it." << endl;
+            cout << "Your hint is: round, smooth. Monkeys all around the world worship it. They run around and kick it... It even has its own sport dedicated to it. " << endl;
             word = "ball";
         }    
         else
         {
-            cout << "Your hint is: A very, very small human. Some are against its death while it is still in primal form. Those guys are weirdoes, do not listen to them." << endl;
+            cout << "Your hint is: A very, very small human. " << endl;
             word = "baby";
         }
         
@@ -136,13 +136,13 @@ void automaticLevelAssignment()
 
      if(fateChooser == 1)
         {
-            cout << "Your hint is: An item often used in schools and other professional fascilities, with the intention to torture its readers." << endl;
-            cout << "A black marker is used to add information to it. It usually hangs on a wall, where its knowledge can be displayed to all who dare look.";
+            cout << "Your hint is: An item often used in schools and other professional fascilities, with the intention to torture its readers. " << endl;
+            cout << "A black marker is used to add information to it. It usually hangs on a wall, where its knowledge can be displayed to all who dare look. ";
             word =  "board";
         }    
         else
         {
-            cout <<"Your hint is: This is a measurement for bread. Good luck. And no, the word is not piece.";
+            cout <<"Your hint is: This is a measurement for bread. Good luck. And no, the word is not piece. ";
             word = "slice";
         }
         break;
@@ -151,12 +151,12 @@ void automaticLevelAssignment()
 
      if(fateChooser == 1)
         {
-            cout << "What button always comes before the decline button on a pop-up asking for some sort of permission?";
+            cout << "What button always comes before the decline button on a pop-up asking for some sort of permission? ";
             word = "accept";
         }    
         else
         {
-            cout<< "A fancy word for cloth.";
+            cout<< "A fancy word for cloth. ";
             word = "fabric"; 
         }
         break;
@@ -165,12 +165,12 @@ void automaticLevelAssignment()
 
       if(fateChooser == 1)
         {
-            cout << "Long eared angels. Fluffy as a cloud, these little cottonballs love jumping, carrots, and are a great house pet. Write the word in plural.";
+            cout << "Long eared angels. Fluffy as a cloud, these little cottonballs love jumping, carrots, and are a great house pet. Write the word in plural. ";
             word = "rabbits";
         }    
         else
         {
-            cout << "A tool you use for cleaning, with a purpose of sucking up dust.";
+            cout << "A tool you use for cleaning, with a purpose of sucking up dust. ";
             word = "vacuum";
         }
         break;
@@ -179,12 +179,12 @@ void automaticLevelAssignment()
 
      if(fateChooser == 1)
         {
-            cout << "A vegetable, having thick green or purple leaves surrounding a spherical heart or head of leaves.";
+            cout << "A vegetable, having thick green or purple leaves surrounding a spherical heart or head of leaves. ";
             word = "cabbage";
         }    
         else
         {
-            cout << "Addicts who spends their time in casinos, betting money and playiing games, trying to win more money. More often or not, they rob themselves and end up on the streets. Word is in singular.";
+            cout << "Addicts who spends their time in casinos, betting money and playiing games, trying to win more money. More often or not, they rob themselves and end up on the streets. Word is in singular. ";
             word = "gambler";
         }
         break;
@@ -193,10 +193,10 @@ void automaticLevelAssignment()
 
 void guessChecker() //Checks if your word is the needed word
 {
-    int damage = getLevel() + 0.5;
+    int damage = level + 0.5;
     string guess;
 
-    while(health > 0 || gameEnded != false)
+    while(health > 0)
     { 
         cout << "Enter what you think the word is: ";
         
@@ -210,8 +210,8 @@ void guessChecker() //Checks if your word is the needed word
 
                 cout << "You guessed: " << guess << endl; 
                 cout << "And the word was: " << word << endl;
+                break;
                 
-                gameEnded = true;
             }
             
             //losing hp part 
@@ -226,12 +226,12 @@ void guessChecker() //Checks if your word is the needed word
                     {
                         health = 0;
                         cout << "You have 0 health left. You've lost." << endl;
-                        gameEnded = true;
                         break;
                     }
                     else
                     {
-			            cout << "You have " << health <<  " health left. Feel threatened." << endl; 
+			            cout << "You have " << health <<  " health left. Feel threatened." << endl;
+                        cout << endl;
                     }
 
 
