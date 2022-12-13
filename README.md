@@ -19,13 +19,13 @@ This game is about the good old game hangman.
 ✅ An amazing learning experience. <br>
 
 ## Our Team
-- Emma Georgieva (Scrum Trainer) 
+- Emma Georgieva (Scrum Trainer) <br>
     link to github: https://github.com/EGGeorgieva21 
-- Svilen Todorov (QA)
+- Svilen Todorov (QA) <br>
     link to github: https://github.com/SDTodorov21
-- Alexander Sivkov (Backend developer)
+- Alexander Sivkov (Backend developer) <br>
     link to github: https://github.com/ATSivkov21
-- Kristyan Kostadinov (Backend developer)
+- Kristyan Kostadinov (Backend developer) <br>
     link to github: https://github.com/KNKostadinov21
 
 ##
