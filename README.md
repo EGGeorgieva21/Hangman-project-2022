@@ -6,7 +6,6 @@ This game is about the good old game hangman.
 
 ## Used technologies
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/640px-ISO_C%2B%2B_Logo.svg.png" width="15" height="15"> C++
-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" width="15" height="15"> HTML
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/640px-Visual_Studio_Icon_2022.svg.png" width="15" height="15"> Visual Studio
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="15" height="15"> Visual Studio Code
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" width="15" height="15"> Microsoft Excel
@@ -20,10 +19,14 @@ This game is about the good old game hangman.
 ✅ An amazing learning experience. <br>
 
 ## Our Team
-- Emma Georgieva (Scrum Trainer)
+- Emma Georgieva (Scrum Trainer) 
+    link to github: https://github.com/EGGeorgieva21 
 - Svilen Todorov (QA)
+    link to github: https://github.com/SDTodorov21
 - Alexander Sivkov (Backend developer)
+    link to github: https://github.com/ATSivkov21
 - Kristyan Kostadinov (Backend developer)
+    link to github: https://github.com/KNKostadinov21
 
 ##
 <h1 align="center" >Enjoy our game</h1>
