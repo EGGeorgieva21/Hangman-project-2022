@@ -1,11 +1,23 @@
 <h1 align="center" >Philosophy of Knowledge</h1>
 <br>
+<p align="center">
+<img src="documentation/logo.png" alt="logo" height="500" width="500""> 
+</p>
+
+<br>
 
 ## Topic
 This game is about the good old game hangman.
 
+
+## How to run the game
+<ol>
+    <li> Download the latest release </li>
+    <li> Run the .exe file </li>
+</ol>
+
 ## Used technologies
-- <img src="">
+
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/640px-ISO_C%2B%2B_Logo.svg.png" width="15" height="15"> C++ <br>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/640px-Visual_Studio_Icon_2022.svg.png" width="15" height="15"> Visual Studio <br>
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="15" height="15"> Visual Studio Code <br>
@@ -21,13 +33,13 @@ This game is about the good old game hangman.
 
 ## Our Team
 - <a href="https://github.com/EGGeorgieva21"> Emma Georgieva (Scrum Trainer)</a> <br>
-    link to github: https://github.com/EGGeorgieva21 
+   
 - <a href="https://github.com/SDTodorov21"> Svilen Todorov (QA) </a><br>
-    link to github: https://github.com/SDTodorov21
+   
 - <a href="https://github.com/ATSivkov21"> Alexander Sivkov (Backend developer) </a><br>
-    link to github: https://github.com/ATSivkov21
+  
 - <a href="https://github.com/KNKostadinov21"> Kristyan Kostadinov (Backend developer) </a><br>
-    link to github: https://github.com/KNKostadinov21
+  
 
 ##
 <h1 align="center" >Enjoy our game</h1>
