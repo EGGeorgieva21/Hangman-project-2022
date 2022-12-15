@@ -16,7 +16,7 @@ void printHuman();
 void printMenuLevel();
 void printRules();
 void startTheGame();
-int getLevel();
+void getLevel();
 void getFate();
 void automaticLevelAssignment();
 void guessChecker();

@@ -95,21 +95,33 @@ void startTheGame()
 }
 
 //Choose your level
-int getLevel() 
+void getLevel() 
 {
     cout << "Enter your level (1 ~ 5): ";
     cin >> level;
     cout << endl;
-    return level;
+
+    while (level < 1 && level > 5) 
+    {
+        cout << "You have to enter a level between 1 and 5: ";
+        cin >> level;
+    }
 }
 
 //Choose your fate
-int getFate()
+void getFate()
 {
     cout << "Choose one your fate. 1 or 2? - ";
     cin >> fateChooser;
     cout << endl;
-    return fateChooser;
+
+    while (fateChooser != 1 && fateChooser != 2)
+    {
+        cout << "You have to enter either 1 or 2: ";
+        cin >> fateChooser;
+        cout << endl;
+    }
+   
 }
 
 //Assigns a the word to the level
