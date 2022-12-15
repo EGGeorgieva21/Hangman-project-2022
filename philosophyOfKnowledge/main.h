@@ -5,11 +5,11 @@
 using namespace std;
 
 //Global declarations
-string start;
-string word;
-int level;
-double health = 16;
-int fateChooser;
+static string start;
+static string word;
+static int level;
+static double health = 16.0;
+static int fateChooser;
 
 void printHangman();
 void printHuman();

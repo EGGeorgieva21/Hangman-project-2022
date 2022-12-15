@@ -101,7 +101,7 @@ void getLevel()
     cin >> level;
     cout << endl;
 
-    while (level < 1 && level > 5) 
+    while (level < 1 || level > 5) 
     {
         cout << "You have to enter a level between 1 and 5: ";
         cin >> level;
