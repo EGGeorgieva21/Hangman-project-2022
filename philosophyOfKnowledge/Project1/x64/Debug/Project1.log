@@ -1,0 +1,3 @@
+﻿  hangmanFunctions.cpp
+C:\Users\Krisi\Downloads\Hangman-project-2022\philosophyOfKnowledge\Project1\hangmanFunctions.cpp(209,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Project1.vcxproj -> C:\Users\Krisi\Downloads\Hangman-project-2022\philosophyOfKnowledge\Project1\x64\Debug\Project1.exe
